@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback | Tasty Bites</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .feedback-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff8f0;
+      padding: 30px;
+      border-radius: 8px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    button {
+      background: #e67e22;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .rating {
+      display: flex;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header (Same as about.html) -->
+  <header>
+    <div class="logo">
+      <h1>Tasty Bites</h1>
+      <p>Delicious Food for Every Occasion</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="feedback-page">
+    <h1>Share Your Experience</h1>
+    
+    <form class="feedback-form" id="feedbackForm">
+      <div class="form-group">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="visit-date">Date of Visit:</label>
+        <input type="date" id="visit-date" name="visit-date">
+      </div>
+
+      <div class="form-group">
+        <label>Rate Your Experience:</label>
+        <div class="rating">
+          <label><input type="radio" name="rating" value="5"> 5 (Excellent)</label>
+          <label><input type="radio" name="rating" value="4"> 4 (Good)</label>
+          <label><input type="radio" name="rating" value="3"> 3 (Average)</label>
+          <label><input type="radio" name="rating" value="2"> 2 (Poor)</label>
+          <label><input type="radio" name="rating" value="1"> 1 (Terrible)</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Your Feedback:</label>
+        <textarea id="comments" name="comments" rows="5" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="recommend">Would you recommend us?</label>
+        <select id="recommend" name="recommend">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+          <option value="maybe">Maybe</option>
+        </select>
+      </div>
+
+      <button type="submit">Submit Feedback:)</button>
+    </form>
+  </main>
+
+  <!-- Footer (Same as about.html) -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Tasty Bites. All rights reserved.</p>
+      <p>123 Main Street, Gaborone 267 77537796 | info@tastybites.com</p>
+      <div class="social-links">
+        <a href="#"><img src="images/facebook-icon.png" alt="Facebook" width="30"></a>
+        <a href="#"><img src="images/instagram-icon.png" alt="Instagram" width="30"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your feedback! We appreciate your time.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
